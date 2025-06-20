@@ -94,7 +94,7 @@ section{
     padding: 10rem 9% 2rem;
     min-height: 100vh;
 }
-.about,.education,.contact,.skills{
+.about,.education,.contact,.skills,.projects{
     overflow: hidden;
 }
 .home{
@@ -156,7 +156,7 @@ section{
     top: 0;
     height: 100%;
     width: 0;
-    border-right: 2px solid #0095ff;
+    border-right: 3px solid #0095ff;
     transform: translateY(-100px);
     opacity: 0;
     animation: CursorSlide 6s linear infinite,
@@ -590,6 +590,84 @@ section.start-animation .skill-box2{
 }
 .bar-3{
     width: 85%;
+}
+/* education section */
+.row{
+    display: flex;
+    column-gap: 4rem;
+    flex-wrap: wrap;
+}
+.column{
+    flex: 1 1 30rem;
+}
+.column:nth-child(1){
+    opacity: 0;
+    transform: translateX(-100px);
+}
+section.start-animation .column:nth-child(1){
+    animation: Right 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.column:nth-child(2){
+    opacity: 0;
+    transform: translateX(100px);
+}
+section.start-animation .column:nth-child(2){
+    animation: Left 1s ease forwards;
+    animation-delay: 1.2s;
+}
+.column h2{
+    font-size: 2.5rem ;
+    margin: 2rem 0 1rem 1.96rem;
+    transform: translateY(-100px);
+    opacity: 0;
+}
+section.start-animation .column h2{
+    animation: top 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.box{
+    border-left: .2rem solid #ff00ee;
+}
+.education-content {
+    padding-left: 1.9rem;
+}
+.education-content .content{
+    padding: 1.5rem;
+    border: .2rem solid #ff00ee;
+    background: rgba(255,255,255,.1);
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    left: -2.8rem;
+    top: -1.5rem;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    background: #ff00ee;
+}
+.content .year{
+    font-size: 1.5rem;
+    color: #ff00ee;
+}
+.content .year i{
+    color: #ff00ee;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+}
+.content h3{
+    font-size: 1.7rem;
+    letter-spacing: .05rem;
+    margin: .5rem 0;
+}
+.content p{
+    font-size: 1.5rem;
 }
 /* contact section */
 section form{
